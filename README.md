@@ -29,7 +29,9 @@ source /home/lego/dev_ws/install/setup.bash
 ```
 
 To launch LeGO LOAM, edit the following files based on your preference.
+```
 1. /home/lego/dev_ws/src/LeGO-LOAM-SR/LeGO-LOAM/launch/run.launch.py
 2. /home/lego/dev_ws/src/LeGO-LOAM-SR/LeGO-LOAM/config/loam_config.yaml
+```
 
 After you have done this, run ```ros2 launch lego_loam_sr run.launch.py```
