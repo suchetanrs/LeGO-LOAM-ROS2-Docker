@@ -1,0 +1,24 @@
+version: "3"
+services:
+  ros2-dashing-base:
+    image: lego-loam-dashing:18.04
+    volumes:
+      #full dev
+      - /dev:/dev:rw
+      #full media
+      - /media:/media:rw
+      #Time
+      - /etc/timezone:/etc/timezone:rw
+      - /etc/localtime:/etc/localtime:rw
+      #ros-workspaces
+#      - ./root_dir/:/root/:rw
+      #cesar-workspaces
+      - ./home_dir/:/home/lego/:rw
+    privileged: true
+    network_mode: host
+    ipc: host
+    stdin_open: true
+    tty: true
+    environment:
+      - DISPLAY
+    entrypoint: /bin/bash
